@@ -1,0 +1,9 @@
+---
+- name: Print message using extra vars
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Print custom message
+      debug:
+        msg: "{{var1}} {{var2}}!"
